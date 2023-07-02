@@ -1,0 +1,131 @@
+<body>
+  <%-include('partials/navbar.ejs')%>
+
+  <div id="main">
+    <!-- main -->
+    <div class="heading">
+      <h1><%=username%> <%=sirname%></h1>
+      <input
+        type="text"
+        id="myInput"
+        class="search"
+        placeholder="Search for names.."
+      />
+    </div>
+
+    <div class="grid-container">
+      <div class="item1">
+        <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+        <h2 class="headingText">College</h2>
+        <h1 class="num">MESCOE</h1>
+      </div>
+
+      <% if(allAssign.length!=0){j=1%> <% for (let i = 0; i < allAssign.length;
+      i++) {%> <%let data = allAssign[i];%> <% if (data.userId==userId) {%>
+
+      <div class="item2">
+        <span class="icon"><i class="fa-solid fa-file-arrow-up"></i></span>
+        <h2 class="headingText">Uploaded</h2>
+        <h1 class="num"><%=j%></h1>
+      </div>
+      <div class="item3">
+        <span class="icon"><i class="fa-solid fa-file-arrow-down"></i></span>
+        <h2 class="headingText">Downloads</h2>
+        <h1 class="num"><%=data.downloads%></h1>
+      </div>
+      <div class="item4">
+        <span class="icon"><i class="fa-solid fa-coins"></i></span>
+        <h2 class="headingText">Points</h2>
+        <h1 class="num points"><%=data.points%></h1>
+      </div>
+
+      <% j++} else {%>
+
+      <div class="item2">
+        <span class="icon"><i class="fa-solid fa-file-arrow-up"></i></span>
+        <h2 class="headingText">Uploaded</h2>
+        <h1 class="num">N/A</h1>
+      </div>
+      <div class="item3">
+        <span class="icon"><i class="fa-solid fa-file-arrow-down"></i></span>
+        <h2 class="headingText">Downloads</h2>
+        <h1 class="num" id="filesDownCount">N/A</h1>
+      </div>
+      <div class="item4">
+        <span class="icon"><i class="fa-solid fa-coins"></i></span>
+        <h2 class="headingText">Points</h2>
+        <h1 class="num points">N/A</h1>
+      </div>
+
+      <%}%> <%} %> <% } else{ %>
+
+      <div class="item2">
+        <span class="icon"><i class="fa-solid fa-file-arrow-up"></i></span>
+        <h2 class="headingText">Uploaded</h2>
+        <h1 class="num">N/A</h1>
+      </div>
+      <div class="item3">
+        <span class="icon"><i class="fa-solid fa-file-arrow-down"></i></span>
+        <h2 class="headingText">Downloads</h2>
+        <h1 class="num" id="filesDownCount">N/A</h1>
+      </div>
+      <div class="item4">
+        <span class="icon"><i class="fa-solid fa-coins"></i></span>
+        <h2 class="headingText">Points</h2>
+        <h1 class="num" id="filesDownCount">N/A</h1>
+      </div>
+
+      <% } %>
+    </div>
+
+    <div class="grid-container-new">
+      <div class="item5 profileCard">
+        <div class="profile">
+          <img src="images/profile.png" alt="logo" />
+          <h2 class="name"><%= username%></h2>
+          <h2 class="name"><%=sirname%></h2>
+          <br />
+          <h2 class="name">
+            <a href="editProfile" class="edit"
+              >Edit <i class="fa-solid fa-pen"></i
+            ></a>
+          </h2>
+        </div>
+      </div>
+
+      <div class="item6 table">
+        <table>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Title</th>
+            <th>Subject</th>
+            <th><i class="fa fa-download"></i></th>
+            <th>Points</th>
+            <th>Action</th>
+          </tr>
+          <% if(allAssign.length!=0){j=1%> <% for (let i = 0; i <
+          allAssign.length; i++) {%> <%let data = allAssign[i];%>
+
+          <tr>
+            <% if (data.userId==userId) {%>
+            <td><%=j%></td>
+            <td><%=data.title %></td>
+            <td><%=data.subject %></td>
+            <td><%=data.downloads%></td>
+            <td><%=data.points%></td>
+            <td><a href="/delete?id=<%=data.id%>">Delete</a></td>
+
+            <% j++} else {}%>
+          </tr>
+          <%} %> <% } else{ %>
+          <tr>
+            <td>No Data Found</td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+    </div>
+
+    <%-include('partials/footer.ejs')%>
+  </div>
+</body>

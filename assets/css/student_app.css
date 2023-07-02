@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image:url("../images/application_bg.jpg") ;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    opacity: 95%;
+  }
+  .container {
+    max-width: 900px;
+    /* max-height: 500px; */
+    margin: 0 auto;
+  }
+  
+  .apply_box {
+    max-width: 550px;
+    height: 605px;
+    padding: 20px;
+    background-color: rgb(245, 235, 235);
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+    font-family:serif;
+    border-radius: 10px;
+  }
+  
+  .title_small {
+    font-size: 20px;
+    font-family: Impact;
+  }
+  
+  .form_container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .form_control {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  
+  input:focus {
+    outline-color: red;
+  }
+  
+  .button_container {
+    display: flex;
+  
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  button {
+    background-color: rgb(35, 24, 59);
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+  }
+  button:hover {
+    background-color: #ccc;
+    border: 2px solid rgb(223, 142, 142);
+    color: black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+  }
+  button {
+    background-color: rgb(35, 24, 59);
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+  }
+  button:hover {
+    background-color: #ccc;
+    border: 2px solid rgb(223, 142, 142);
+    color: black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+  }
+  .textarea_control {
+    grid-column: 1 / span 2;
+  }
+  .textarea_control textarea {
+    width: 100%;
+  }
+  
+  @media (max-width: 460px) {
+    .textarea_control {
+      grid-column: 1 /span1;
+    }
+  };  

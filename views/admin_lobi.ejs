@@ -1,0 +1,145 @@
+
+<!Doctype HTML>
+	<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="/css/Admin_lobi.css" type="text/css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+
+	<body>
+		
+		<div id="mySidenav" class="sidenav">
+		<p class="logo"><span>M</span>ESCOE</p>
+	  <a href="#" class="icon-a"><i class="fa fa-dashboard icons"></i>   Dashboard</a>
+	  <a href="#"class="icon-a"><i class="fa fa-users icons"></i>   Add students </a>
+	  <a href="#"class="icon-a"><i class="fa fa-map icons"></i>   Student Mapping</a>
+	  <a href="#"class="icon-a"><i class="fa fa-users icons"></i>   Add Course</a>
+
+
+	</div>
+	<div id="main">
+
+		<div class="head">
+			<div class="col-div-6">
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav"  >☰ Dashboard</span>
+	<span style="font-size:30px;cursor:pointer; color: white;" class="nav2"  >☰ Dashboard</span>
+	<form class="d-flex" role="search">
+		<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+		<button class="btn btn-outline-success" type="submit">Search</button>
+	  </form>
+	</div>
+		
+		<div class="col-div-6">
+		<div class="profile">
+
+			<img src="../images/admin_login.png" class="pro-img" />
+			<p class="admin">Admin</p>
+		</div>
+	</div>
+		<div class="clearfix"></div>
+	</div>
+
+		<div class="clearfix"></div>
+		<br/>
+		
+		
+		<div class="col-div-8">
+			<div class="box-8">
+			<div class="content-box">
+				<p>Student Details</p>
+				<br/>
+				<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Email Id</th>
+        <th>Mobile No</th>
+        <th>College PRN</th>
+	    <th>Department</th>
+        
+	  </tr>
+	  
+	  <tr>
+	    <td>Manasi Bhosale</td>
+	    <td>mmbhosale24@gmail.com</td>
+	    <td>9822456121</td>
+        <td>F21113024</td>
+        <td>Computer</td>
+	  </tr>
+      <tr>
+	    <td>Shreya Pandekar</td>
+	    <td>pandekarshreya@gmail.com</td>
+	    <td>7517860043</td>
+        <td>F21113040</td>
+        <td>Computer</td>
+
+	  </tr>
+	  <tr>
+	    <td>Kashish Kosalge</td>
+	    <td>kosalgekashish@gmail.com</td>
+        <td>9854526121</td>
+	    <td>F21113063</td>
+        <td>Computer</td>
+	  </tr>
+	  <tr>
+	    <td>Diksha Gavshete</td>
+	    <td>gavshetediksha@gmail.com</td>
+        <td>7554526121</td>
+	    <td>F21113070</td>
+        <td>Computer</td>
+	  </tr>
+      
+      <tr>
+	    <td>Shantanu Bhosale</td>
+	    <td>shantanubhosle@gmail.com</td>
+	    <td>9545737375</td>
+        <td>F21113071</td>
+        <td>Computer</td>
+
+	  </tr>
+	  
+	  
+	</table>
+			</div>
+		</div>
+		</div>
+
+		
+			
+		<div class="clearfix"></div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+
+	  $(".nav").click(function(){
+	    $("#mySidenav").css('width','70px');
+	    $("#main").css('margin-left','70px');
+	    $(".logo").css('visibility', 'hidden');
+	    $(".logo span").css('visibility', 'visible');
+	     $(".logo span").css('margin-left', '-10px');
+	     $(".icon-a").css('visibility', 'hidden');
+	     $(".icons").css('visibility', 'visible');
+	     $(".icons").css('margin-left', '-8px');
+	      $(".nav").css('display','none');
+	      $(".nav2").css('display','block');
+	  });
+
+	$(".nav2").click(function(){
+	    $("#mySidenav").css('width','300px');
+	    $("#main").css('margin-left','300px');
+	    $(".logo").css('visibility', 'visible');
+	     $(".icon-a").css('visibility', 'visible');
+	     $(".icons").css('visibility', 'visible');
+	     $(".nav").css('display','block');
+	      $(".nav2").css('display','none');
+	 });
+
+	</script>
+
+	</body>
+
+
+	</html>
